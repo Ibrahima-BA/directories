@@ -1,4 +1,6 @@
 // FORCER LE MODE OFFLINE - Désactiver complètement Redis
+// Pas d'import de @upstash/redis pour éviter les appels réseau
+
 const mockRedis = {
   sadd: async () => 1,
   incr: async () => 1,
@@ -12,5 +14,5 @@ const mockRedis = {
   flushall: async () => 'OK',
 };
 
-// TOUJOURS utiliser le mock en développement
+// TOUJOURS utiliser le mock - pas d'appels réseau
 export const redis = mockRedis as any;
