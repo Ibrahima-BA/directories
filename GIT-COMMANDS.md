@@ -243,6 +243,6 @@ git merge feature/nouvelle-fonctionnalite
 
 ---
 
-**Dernière mise à jour** : 25 septembre 2024  
+**Dernière mise à jour** : 25 septembre 2025  
 **Version documentée** : v1.1.1  
 **Statut** : Tags v1.0.0, v1.1.0, v1.1.1 poussés avec succès
