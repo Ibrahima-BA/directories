@@ -2,7 +2,7 @@
 
 Toutes les modifications notables de ce projet seront documentées dans ce fichier.
 
-## [1.1.1] - 2024-12-25
+## [1.1.1] - 2024-09-25
 
 ### 🔧 Version 1.1.1 - Configuration SSH et améliorations
 
@@ -34,7 +34,7 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 
 ---
 
-## [1.1.0] - 2024-12-25
+## [1.1.0] - 2024-09-25
 
 ### 🔧 Version 1.1.0 - Corrections des erreurs
 
@@ -60,7 +60,7 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 
 ---
 
-## [1.0.0] - 2024-12-25
+## [1.0.0] - 2024-09-25
 
 ### 🎉 Version Initiale - "Bon Début"
 
