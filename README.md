@@ -79,11 +79,11 @@ If you want to add new prompts to an existing rule, follow these steps:
 
 ## 🚀 Getting Started
 
-### Version 1.0 - État Actuel
+### Version 1.1.1 - État Actuel
 
 **⚠️ Statut :** En développement - Mode offline fonctionnel
 
-Cette version 1.0 est un **bon début** avec les fonctionnalités suivantes :
+Cette version 1.1.1 est un **bon début** avec les fonctionnalités suivantes :
 
 #### ✅ Fonctionnalités Implémentées
 - **Mode offline complet** : L'application fonctionne sans base de données externe

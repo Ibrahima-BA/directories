@@ -1,0 +1,429 @@
+<!DOCTYPE html><html><head>
+      <title>PROJECT-WIKI</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/ibrahimaba/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.19/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      <div>
+<h1 id="-wiki-complet---projet-directories">📚 Wiki Complet - Projet Directories </h1>
+<h2 id="-vue-densemble-du-projet">🎯 Vue d'ensemble du projet </h2>
+<p><strong>Directories</strong> est un projet Next.js monorepo qui fournit des règles et des serveurs MCP (Model Context Protocol) pour les éditeurs Cursor et Windsurf. Ce wiki documente tout ce que nous avons appris en développant ce projet.</p>
+<h2 id="-table-des-matières">📋 Table des matières </h2>
+<ol>
+<li><a href="#architecture-du-projet">Architecture du projet</a></li>
+<li><a href="#probl%C3%A8mes-rencontr%C3%A9s">Problèmes rencontrés</a></li>
+<li><a href="#solutions-impl%C3%A9ment%C3%A9es">Solutions implémentées</a></li>
+<li><a href="#le%C3%A7ons-apprises">Leçons apprises</a></li>
+<li><a href="#bonnes-pratiques">Bonnes pratiques</a></li>
+<li><a href="#configuration-docker">Configuration Docker</a></li>
+<li><a href="#gestion-git">Gestion Git</a></li>
+<li><a href="#d%C3%A9pannage">Dépannage</a></li>
+<li><a href="#prochaines-%C3%A9tapes">Prochaines étapes</a></li>
+</ol>
+<hr>
+<h2 id="️-architecture-du-projet">🏗️ Architecture du projet </h2>
+<h3 id="structure-du-monorepo">Structure du monorepo </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>directories/
+├── apps/
+│   ├── cursor/          # Application Cursor (Next.js)
+│   └── windsurf/        # Application Windsurf (Next.js)
+├── packages/
+│   ├── data/            # Données partagées (règles, MCPs)
+│   └── kv/              # Configuration Redis/Upstash
+├── Dockerfile           # Configuration Docker
+├── docker-compose.yml   # Orchestration des services
+└── README.md           # Documentation principale
+</code></pre><h3 id="technologies-utilisées">Technologies utilisées </h3>
+<ul>
+<li><strong>Next.js 15.5.4</strong> - Framework React avec App Router</li>
+<li><strong>TypeScript</strong> - Typage statique</li>
+<li><strong>Tailwind CSS</strong> - Framework CSS</li>
+<li><strong>Supabase</strong> - Base de données et authentification</li>
+<li><strong>Redis/Upstash</strong> - Cache et sessions</li>
+<li><strong>Docker</strong> - Containerisation</li>
+<li><strong>Bun</strong> - Gestionnaire de packages et runtime</li>
+</ul>
+<hr>
+<h2 id="-problèmes-rencontrés">🐛 Problèmes rencontrés </h2>
+<h3 id="1-erreurs-de-dépendances">1. Erreurs de dépendances </h3>
+<p><strong>Problème</strong> : <code>npm error Missing script: "dev"</code></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Erreur</span>
+<span class="token function">npm</span> run dev
+<span class="token comment"># npm error Missing script: "dev"</span>
+</code></pre><p><strong>Cause</strong> : Structure monorepo avec workspaces<br>
+<strong>Solution</strong> : Utiliser <code>cd apps/cursor &amp;&amp; npm run dev</code></p>
+<h3 id="2-commandes-manquantes">2. Commandes manquantes </h3>
+<p><strong>Problème</strong> : <code>sh: next: command not found</code></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Erreur</span>
+sh: next: <span class="token builtin class-name">command</span> not found
+</code></pre><p><strong>Cause</strong> : Dépendances non installées dans le sous-projet<br>
+<strong>Solution</strong> : <code>bun install</code> à la racine du projet</p>
+<h3 id="3-variables-denvironnement-manquantes">3. Variables d'environnement manquantes </h3>
+<p><strong>Problème</strong> : <code>The 'url' property is missing or undefined</code></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Erreur</span>
+<span class="token punctuation">[</span>Upstash Redis<span class="token punctuation">]</span> The <span class="token string">'url'</span> property is missing or undefined
+@supabase/ssr: Your project's URL and API key are required
+</code></pre><p><strong>Cause</strong> : Fichier <code>.env.local</code> manquant<br>
+<strong>Solution</strong> : Créer <code>.env.local</code> avec variables placeholder</p>
+<h3 id="4-erreurs-de-fetch">4. Erreurs de fetch </h3>
+<p><strong>Problème</strong> : <code>TypeError: fetch failed</code></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Erreur</span>
+TypeError: fetch failed
+<span class="token punctuation">[</span>cause<span class="token punctuation">]</span>: <span class="token punctuation">[</span>Error: getaddrinfo ENOTFOUND placeholder.upstash.io<span class="token punctuation">]</span>
+</code></pre><p><strong>Cause</strong> : Tentatives de connexion à des URLs factices<br>
+<strong>Solution</strong> : Mocks complets pour tous les services</p>
+<h3 id="5-erreurs-de-chaînage-de-méthodes">5. Erreurs de chaînage de méthodes </h3>
+<p><strong>Problème</strong> : <code>supabase.from(...).select(...).limit(...).order is not a function</code></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Erreur</span>
+TypeError: supabase.from<span class="token punctuation">(</span><span class="token punctuation">..</span>.<span class="token punctuation">)</span>.select<span class="token punctuation">(</span><span class="token punctuation">..</span>.<span class="token punctuation">)</span>.limit<span class="token punctuation">(</span><span class="token punctuation">..</span>.<span class="token punctuation">)</span>.order is not a <span class="token keyword keyword-function">function</span>
+</code></pre><p><strong>Cause</strong> : Mocks Supabase incomplets<br>
+<strong>Solution</strong> : Implémentation complète du chaînage de méthodes</p>
+<hr>
+<h2 id="-solutions-implémentées">✅ Solutions implémentées </h2>
+<h3 id="1-mode-offline-complet">1. Mode offline complet </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// apps/cursor/src/lib/config.ts</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-const">const</span> isOfflineMode <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-const">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  offline<span class="token operator">:</span> isOfflineMode<span class="token punctuation">,</span>
+  supabase<span class="token operator">:</span> <span class="token punctuation">{</span> enabled<span class="token operator">:</span> <span class="token operator">!</span>isOfflineMode <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  redis<span class="token operator">:</span> <span class="token punctuation">{</span> enabled<span class="token operator">:</span> <span class="token operator">!</span>isOfflineMode <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  email<span class="token operator">:</span> <span class="token punctuation">{</span> enabled<span class="token operator">:</span> <span class="token operator">!</span>isOfflineMode <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h3 id="2-données-statiques">2. Données statiques </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// apps/cursor/src/data/static-data.ts</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-const">const</span> staticRules <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    title<span class="token operator">:</span> <span class="token string">"Next.js Best Practices"</span><span class="token punctuation">,</span>
+    content<span class="token operator">:</span> <span class="token string">"# Next.js Best Practices\n\n## Core Principles..."</span><span class="token punctuation">,</span>
+    tags<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Next.js"</span><span class="token punctuation">,</span> <span class="token string">"React"</span><span class="token punctuation">,</span> <span class="token string">"Performance"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// ... plus de données</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre><h3 id="3-mocks-complets">3. Mocks complets </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// apps/cursor/src/lib/kv.ts</span>
+<span class="token keyword keyword-const">const</span> mockRedis <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">sadd</span><span class="token operator">:</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">incr</span><span class="token operator">:</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">set</span><span class="token operator">:</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token string">'OK'</span><span class="token punctuation">,</span>
+  <span class="token comment">// ... autres méthodes</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-const">const</span> redis <span class="token operator">=</span> mockRedis <span class="token keyword keyword-as">as</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+</code></pre><h3 id="4-configuration-docker">4. Configuration Docker </h3>
+<pre data-role="codeBlock" data-info="dockerfile" class="language-dockerfile dockerfile"><code><span class="token comment"># Dockerfile</span>
+<span class="token instruction"><span class="token keyword keyword-FROM">FROM</span> node:18-alpine <span class="token keyword keyword-AS">AS</span> base</span>
+<span class="token instruction"><span class="token keyword keyword-RUN">RUN</span> apk add --no-cache libc6-compat</span>
+
+<span class="token instruction"><span class="token keyword keyword-FROM">FROM</span> base <span class="token keyword keyword-AS">AS</span> deps</span>
+<span class="token instruction"><span class="token keyword keyword-WORKDIR">WORKDIR</span> /app</span>
+<span class="token instruction"><span class="token keyword keyword-COPY">COPY</span> package.json bun.lockb ./</span>
+<span class="token instruction"><span class="token keyword keyword-RUN">RUN</span> npm install -g bun</span>
+<span class="token instruction"><span class="token keyword keyword-RUN">RUN</span> bun install --frozen-lockfile</span>
+
+<span class="token instruction"><span class="token keyword keyword-FROM">FROM</span> base <span class="token keyword keyword-AS">AS</span> builder</span>
+<span class="token instruction"><span class="token keyword keyword-WORKDIR">WORKDIR</span> /app</span>
+<span class="token instruction"><span class="token keyword keyword-COPY">COPY</span> <span class="token options"><span class="token property">--from</span><span class="token punctuation">=</span><span class="token string">deps</span></span> /app/node_modules ./node_modules</span>
+<span class="token instruction"><span class="token keyword keyword-COPY">COPY</span> . .</span>
+<span class="token instruction"><span class="token keyword keyword-ENV">ENV</span> NEXT_TELEMETRY_DISABLED 1</span>
+<span class="token instruction"><span class="token keyword keyword-ENV">ENV</span> NODE_ENV production</span>
+<span class="token instruction"><span class="token keyword keyword-WORKDIR">WORKDIR</span> /app/apps/cursor</span>
+<span class="token instruction"><span class="token keyword keyword-RUN">RUN</span> bun run build</span>
+
+<span class="token instruction"><span class="token keyword keyword-FROM">FROM</span> base <span class="token keyword keyword-AS">AS</span> runner</span>
+<span class="token instruction"><span class="token keyword keyword-WORKDIR">WORKDIR</span> /app</span>
+<span class="token instruction"><span class="token keyword keyword-ENV">ENV</span> NODE_ENV production</span>
+<span class="token instruction"><span class="token keyword keyword-COPY">COPY</span> <span class="token options"><span class="token property">--from</span><span class="token punctuation">=</span><span class="token string">builder</span></span> /app/apps/cursor/.next/standalone ./</span>
+<span class="token instruction"><span class="token keyword keyword-COPY">COPY</span> <span class="token options"><span class="token property">--from</span><span class="token punctuation">=</span><span class="token string">builder</span></span> /app/apps/cursor/.next/static ./.next/static</span>
+<span class="token instruction"><span class="token keyword keyword-USER">USER</span> nextjs</span>
+<span class="token instruction"><span class="token keyword keyword-EXPOSE">EXPOSE</span> 3000</span>
+<span class="token instruction"><span class="token keyword keyword-CMD">CMD</span> [<span class="token string">"node"</span>, <span class="token string">"server.js"</span>]</span>
+</code></pre><hr>
+<h2 id="-leçons-apprises">🎓 Leçons apprises </h2>
+<h3 id="1-les-mocks-complexes-sont-fragiles">1. <strong>Les mocks complexes sont fragiles</strong> </h3>
+<ul>
+<li>❌ <strong>Problème</strong> : Mocks avec chaînage de méthodes complexes</li>
+<li>✅ <strong>Solution</strong> : Données statiques simples et fiables</li>
+</ul>
+<h3 id="2-la-simplicité-est-préférable">2. <strong>La simplicité est préférable</strong> </h3>
+<ul>
+<li>❌ <strong>Problème</strong> : Tentatives de mocker tous les services externes</li>
+<li>✅ <strong>Solution</strong> : Mode offline avec données statiques</li>
+</ul>
+<h3 id="3-les-données-statiques-sont-fiables">3. <strong>Les données statiques sont fiables</strong> </h3>
+<ul>
+<li>✅ <strong>Avantage</strong> : Toujours disponibles, pas de dépendances</li>
+<li>✅ <strong>Avantage</strong> : Performance optimale, pas de latence réseau</li>
+</ul>
+<h3 id="4-le-mode-offline-est-efficace">4. <strong>Le mode offline est efficace</strong> </h3>
+<ul>
+<li>✅ <strong>Avantage</strong> : Pas de dépendances externes</li>
+<li>✅ <strong>Avantage</strong> : Développement plus rapide et fiable</li>
+</ul>
+<h3 id="5-lapproche-progressive-fonctionne">5. <strong>L'approche progressive fonctionne</strong> </h3>
+<ul>
+<li>✅ <strong>Méthode</strong> : Une étape à la fois</li>
+<li>✅ <strong>Méthode</strong> : Tester après chaque modification</li>
+</ul>
+<h3 id="6-la-documentation-est-cruciale">6. <strong>La documentation est cruciale</strong> </h3>
+<ul>
+<li>✅ <strong>Important</strong> : Documenter chaque problème et solution</li>
+<li>✅ <strong>Important</strong> : Créer des guides pour les futurs développeurs</li>
+</ul>
+<hr>
+<h2 id="-bonnes-pratiques">🏆 Bonnes pratiques </h2>
+<h3 id="1-gestion-des-erreurs">1. <strong>Gestion des erreurs</strong> </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// ✅ Bon : Gestion d'erreur explicite</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token constant">OFFLINE_MODE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-return">return</span> <span class="token punctuation">{</span> data<span class="token operator">:</span> staticData<span class="token punctuation">,</span> error<span class="token operator">:</span> <span class="token keyword keyword-null">null</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// ❌ Mauvais : Pas de gestion d'erreur</span>
+<span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="2-configuration-denvironnement">2. <strong>Configuration d'environnement</strong> </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># ✅ Bon : Variables d'environnement claires</span>
+<span class="token assign-left variable">NODE_ENV</span><span class="token operator">=</span>development
+<span class="token assign-left variable">OFFLINE_MODE</span><span class="token operator">=</span>true
+<span class="token assign-left variable">NEXT_PUBLIC_SUPABASE_URL</span><span class="token operator">=</span>https://placeholder.supabase.co
+
+<span class="token comment"># ❌ Mauvais : Variables vides ou manquantes</span>
+<span class="token assign-left variable">NEXT_PUBLIC_SUPABASE_URL</span><span class="token operator">=</span>
+</code></pre><h3 id="3-structure-de-projet">3. <strong>Structure de projet</strong> </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code># ✅ Bon : Séparation claire des responsabilités
+src/
+├── lib/           # Configuration et utilitaires
+├── data/          # Données et requêtes
+├── components/    # Composants réutilisables
+└── app/          # Pages et routes
+</code></pre><h3 id="4-documentation">4. <strong>Documentation</strong> </h3>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token title important"><span class="token punctuation">#</span> ✅ Bon : Documentation complète</span>
+<span class="token title important"><span class="token punctuation">##</span> 🎯 Problème</span>
+Description claire du problème
+
+<span class="token title important"><span class="token punctuation">##</span> ✅ Solution</span>
+Explication de la solution implémentée
+
+<span class="token title important"><span class="token punctuation">##</span> 📝 Code</span>
+Exemples de code avec commentaires
+</code></pre><hr>
+<h2 id="-configuration-docker">🐳 Configuration Docker </h2>
+<h3 id="dockerfile-optimisé">Dockerfile optimisé </h3>
+<pre data-role="codeBlock" data-info="dockerfile" class="language-dockerfile dockerfile"><code><span class="token comment"># Multi-stage build pour optimiser la taille</span>
+<span class="token instruction"><span class="token keyword keyword-FROM">FROM</span> node:18-alpine <span class="token keyword keyword-AS">AS</span> base</span>
+<span class="token instruction"><span class="token keyword keyword-FROM">FROM</span> base <span class="token keyword keyword-AS">AS</span> deps</span>
+<span class="token instruction"><span class="token keyword keyword-FROM">FROM</span> base <span class="token keyword keyword-AS">AS</span> builder</span>
+<span class="token instruction"><span class="token keyword keyword-FROM">FROM</span> base <span class="token keyword keyword-AS">AS</span> runner</span>
+
+<span class="token comment"># Utilisateur non-root pour la sécurité</span>
+<span class="token instruction"><span class="token keyword keyword-RUN">RUN</span> addgroup --system --gid 1001 nodejs</span>
+<span class="token instruction"><span class="token keyword keyword-RUN">RUN</span> adduser --system --uid 1001 nextjs</span>
+<span class="token instruction"><span class="token keyword keyword-USER">USER</span> nextjs</span>
+</code></pre><h3 id="docker-compose">Docker Compose </h3>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.8'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">cursor-app</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span> .
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"3000:3000"</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> NODE_ENV=production
+    <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> redis
+  
+  <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis<span class="token punctuation">:</span>7<span class="token punctuation">-</span>alpine
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"6379:6379"</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> redis<span class="token punctuation">-</span>data<span class="token punctuation">:</span>/data
+</code></pre><h3 id="scripts-daide">Scripts d'aide </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment"># docker-scripts.sh</span>
+<span class="token keyword keyword-case">case</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token keyword keyword-in">in</span>
+  build<span class="token punctuation">)</span> <span class="token function">docker-compose</span> build <span class="token punctuation">;</span><span class="token punctuation">;</span>
+  up<span class="token punctuation">)</span> <span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span> <span class="token punctuation">;</span><span class="token punctuation">;</span>
+  down<span class="token punctuation">)</span> <span class="token function">docker-compose</span> down <span class="token punctuation">;</span><span class="token punctuation">;</span>
+  logs<span class="token punctuation">)</span> <span class="token function">docker-compose</span> logs <span class="token parameter variable">-f</span> <span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-esac">esac</span>
+</code></pre><hr>
+<h2 id="-gestion-git">📝 Gestion Git </h2>
+<h3 id="workflow-git-utilisé">Workflow Git utilisé </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># 1. Vérification du statut</span>
+<span class="token function">git</span> status
+
+<span class="token comment"># 2. Ajout des fichiers</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 3. Commit avec message détaillé</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"🎉 Version 1.0.0 - Bon Début
+
+✅ Fonctionnalités implémentées:
+- Mode offline complet
+- Interface utilisateur fonctionnelle
+- Configuration Docker complète
+
+🐛 Problèmes connus:
+- Erreurs de fetch vers placeholder.upstash.io
+- Connexion base de données non configurée"</span>
+
+<span class="token comment"># 4. Création du tag</span>
+<span class="token function">git</span> tag <span class="token parameter variable">-a</span> v1.0.0 <span class="token parameter variable">-m</span> <span class="token string">"Version 1.0.0 - Bon Début"</span>
+
+<span class="token comment"># 5. Push vers remote</span>
+<span class="token function">git</span> push origin main <span class="token parameter variable">--tags</span>
+</code></pre><h3 id="messages-de-commit-efficaces">Messages de commit efficaces </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># ✅ Bon : Message structuré avec emojis</span>
+🎉 Version <span class="token number">1.0</span>.0 - Bon Début
+
+✅ Fonctionnalités implémentées:
+- Mode offline complet
+- Interface utilisateur fonctionnelle
+
+🐛 Problèmes connus:
+- Erreurs de fetch
+- Connexion base de données
+
+<span class="token comment"># ❌ Mauvais : Message vague</span>
+fix stuff
+</code></pre><hr>
+<h2 id="-dépannage">🔧 Dépannage </h2>
+<h3 id="problèmes-courants-et-solutions">Problèmes courants et solutions </h3>
+<h4 id="1-port-déjà-utilisé">1. <strong>Port déjà utilisé</strong> </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Problème</span>
+⚠ Port <span class="token number">3000</span> is <span class="token keyword keyword-in">in</span> use by an unknown process, using available port <span class="token number">3001</span>
+
+<span class="token comment"># Solution</span>
+<span class="token function">pkill</span> <span class="token parameter variable">-f</span> <span class="token string">"bun run dev"</span>
+<span class="token comment"># ou</span>
+<span class="token function">lsof</span> <span class="token parameter variable">-ti:3000</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">kill</span> <span class="token parameter variable">-9</span>
+</code></pre><h4 id="2-erreurs-de-compilation">2. <strong>Erreurs de compilation</strong> </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Problème</span>
+TypeError: fetch failed
+
+<span class="token comment"># Solution</span>
+<span class="token comment"># Vérifier les mocks et désactiver les appels réseau</span>
+</code></pre><h4 id="3-variables-denvironnement">3. <strong>Variables d'environnement</strong> </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Problème</span>
+The <span class="token string">'url'</span> property is missing or undefined
+
+<span class="token comment"># Solution</span>
+<span class="token comment"># Créer .env.local avec variables placeholder</span>
+</code></pre><h4 id="4-dépendances-manquantes">4. <strong>Dépendances manquantes</strong> </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Problème</span>
+sh: next: <span class="token builtin class-name">command</span> not found
+
+<span class="token comment"># Solution</span>
+bun <span class="token function">install</span>
+<span class="token comment"># ou</span>
+<span class="token function">npm</span> <span class="token function">install</span>
+</code></pre><h3 id="commandes-de-diagnostic">Commandes de diagnostic </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Vérifier les processus en cours</span>
+<span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> bun
+
+<span class="token comment"># Vérifier les ports utilisés</span>
+<span class="token function">lsof</span> <span class="token parameter variable">-i</span> :3000
+
+<span class="token comment"># Vérifier les variables d'environnement</span>
+<span class="token function">cat</span> .env.local
+
+<span class="token comment"># Vérifier les logs</span>
+<span class="token function">docker-compose</span> logs <span class="token parameter variable">-f</span>
+</code></pre><hr>
+<h2 id="-prochaines-étapes">🚀 Prochaines étapes </h2>
+<h3 id="version-12---configuration-base-de-données">Version 1.2 - Configuration base de données </h3>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Configuration Supabase réelle</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Authentification utilisateur</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Gestion des sessions</li>
+</ul>
+<h3 id="version-13---services-externes">Version 1.3 - Services externes </h3>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Configuration Redis/Upstash</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Intégration Luma API</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Service d'email (Resend)</li>
+</ul>
+<h3 id="version-20---production">Version 2.0 - Production </h3>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Tests unitaires et d'intégration</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> CI/CD pipeline</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Monitoring et logging</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Déploiement automatisé</li>
+</ul>
+<h3 id="améliorations-techniques">Améliorations techniques </h3>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Optimisation des performances</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Sécurité renforcée</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Documentation API</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Tests end-to-end</li>
+</ul>
+<hr>
+<h2 id="-ressources-utiles">📚 Ressources utiles </h2>
+<h3 id="documentation-officielle">Documentation officielle </h3>
+<ul>
+<li><a href="https://nextjs.org/docs">Next.js Documentation</a></li>
+<li><a href="https://supabase.com/docs">Supabase Documentation</a></li>
+<li><a href="https://docs.docker.com/">Docker Documentation</a></li>
+<li><a href="https://git-scm.com/doc">Git Documentation</a></li>
+</ul>
+<h3 id="outils-recommandés">Outils recommandés </h3>
+<ul>
+<li><strong>Bun</strong> - Runtime et gestionnaire de packages</li>
+<li><strong>Docker</strong> - Containerisation</li>
+<li><strong>Vercel</strong> - Déploiement Next.js</li>
+<li><strong>GitHub</strong> - Gestion de code</li>
+</ul>
+<h3 id="bonnes-pratiques">Bonnes pratiques </h3>
+<ul>
+<li><strong>Mode offline</strong> pour le développement</li>
+<li><strong>Données statiques</strong> pour la démonstration</li>
+<li><strong>Mocks complets</strong> pour les services externes</li>
+<li><strong>Documentation</strong> à jour et complète</li>
+</ul>
+<hr>
+<h2 id="-conclusion">🎯 Conclusion </h2>
+<p>Ce projet nous a appris l'importance de :</p>
+<ol>
+<li><strong>Commencer simple</strong> - Mode offline avec données statiques</li>
+<li><strong>Documenter tout</strong> - Chaque problème et solution</li>
+<li><strong>Tester progressivement</strong> - Une étape à la fois</li>
+<li><strong>Préparer la production</strong> - Configuration Docker complète</li>
+<li><strong>Gérer les versions</strong> - Tags et commits structurés</li>
+</ol>
+<p>Le projet est maintenant dans un état stable avec une base solide pour les développements futurs.</p>
+<hr>
+<p><strong>Dernière mise à jour</strong> : 25 décembre 2024<br>
+<strong>Version documentée</strong> : v1.1.0<br>
+<strong>Statut</strong> : Mode offline fonctionnel, prêt pour la production</p>
+</div>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

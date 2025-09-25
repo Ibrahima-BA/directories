@@ -478,5 +478,5 @@ Le projet est maintenant dans un état stable avec une base solide pour les dév
 ---
 
 **Dernière mise à jour** : 25 décembre 2024  
-**Version documentée** : v1.1.0  
+**Version documentée** : v1.1.1  
 **Statut** : Mode offline fonctionnel, prêt pour la production
