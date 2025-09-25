@@ -1,6 +1,16 @@
-import { Redis } from "@upstash/redis";
+// FORCER LE MODE OFFLINE - Désactiver complètement Redis
+const mockRedis = {
+  sadd: async () => 1,
+  incr: async () => 1,
+  get: async () => null,
+  set: async () => 'OK',
+  del: async () => 1,
+  exists: async () => 0,
+  expire: async () => 1,
+  ttl: async () => -1,
+  keys: async () => [],
+  flushall: async () => 'OK',
+};
 
-export const redis = new Redis({
-  url: process.env.UPSTASH_REDIS_REST_URL!,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
-});
+// TOUJOURS utiliser le mock en développement
+export const redis = mockRedis as any;

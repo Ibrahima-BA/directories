@@ -7,6 +7,9 @@ import {
   getTotalUsers,
 } from "@/data/queries";
 import { getPopularRules } from "@directories/data/popular";
+import { staticJobs, staticMcps } from "@/data/static-data";
+import { config } from "@/lib/config";
+import { OfflineBanner } from "@/components/offline-banner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,26 +24,31 @@ export const revalidate = 86400; // Revalidate once every day
 
 export default async function Page() {
   const popularRules = await getPopularRules();
-  const { data: featuredJobs } = await getFeaturedJobs({
-    onlyPremium: true,
-  });
+  
+  const { data: featuredJobs } = config.offline 
+    ? { data: staticJobs.filter(job => job.featured) }
+    : await getFeaturedJobs({ onlyPremium: true });
 
-  const { data: featuredMCPs } = await getFeaturedMCPs({
-    onlyPremium: true,
-  });
+  const { data: featuredMCPs } = config.offline 
+    ? { data: staticMcps.filter(mcp => mcp.featured) }
+    : await getFeaturedMCPs({ onlyPremium: true });
 
-  const { data: totalUsers } = await getTotalUsers();
+  const { data: totalUsers } = config.offline 
+    ? { data: { count: 1250 } }
+    : await getTotalUsers();
 
-  const { data: members } = await getMembers({
-    page: 1,
-    limit: 12,
-  });
+  const { data: members } = config.offline 
+    ? { data: [] }
+    : await getMembers({ page: 1, limit: 12 });
 
-  const { data: popularPosts } = await getPopularPosts();
+  const { data: popularPosts } = config.offline 
+    ? { data: [] }
+    : await getPopularPosts();
 
   return (
     <div className="flex justify-center min-h-screen w-full md:px-0 px-6 mt-[10%]">
       <div className="w-full max-w-6xl">
+        {config.offline && <OfflineBanner />}
         <Startpage
           sections={popularRules}
           jobs={featuredJobs}

@@ -1,6 +1,9 @@
 import { JobsFeatured } from "@/components/jobs/jobs-featured";
 import { JobsList } from "@/components/jobs/jobs-list";
 import { getFeaturedJobs } from "@/data/queries";
+import { staticJobs } from "@/data/static-data";
+import { config } from "@/lib/config";
+import { OfflineBanner } from "@/components/offline-banner";
 import Link from "next/link";
 
 export const metadata = {
@@ -11,10 +14,11 @@ export const metadata = {
 export const revalidate = 3600;
 
 export default async function Page() {
-  const { data: featuredJobs } = await getFeaturedJobs();
+  const { data: featuredJobs } = config.offline ? { data: staticJobs.filter(job => job.featured) } : await getFeaturedJobs();
 
   return (
     <div className="max-w-screen-xl mx-auto px-6 py-12 md:mt-24 pb-32">
+      <OfflineBanner message="Emplois de démonstration" />
       <h1 className="text-xl mb-2">Featured Jobs</h1>
       <p className="text-sm text-[#878787] mb-8">
         Browse positions or{" "}

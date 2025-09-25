@@ -1,0 +1,59 @@
+# Dockerfile pour l'application Windsurf
+FROM node:18-alpine AS base
+
+# Installer les dépendances nécessaires
+RUN apk add --no-cache libc6-compat
+
+# Étape 1: Installer les dépendances
+FROM base AS deps
+WORKDIR /app
+
+# Copier les fichiers de configuration des packages
+COPY package.json bun.lockb ./
+COPY apps/windsurf/package.json ./apps/windsurf/
+COPY packages/data/package.json ./packages/data/
+COPY packages/kv/package.json ./packages/kv/
+
+# Installer les dépendances avec bun
+RUN npm install -g bun
+RUN bun install --frozen-lockfile
+
+# Étape 2: Builder l'application
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+# Variables d'environnement pour le build
+ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV production
+
+# Builder l'application Windsurf
+WORKDIR /app/apps/windsurf
+RUN bun run build
+
+# Étape 3: Image de production
+FROM base AS runner
+WORKDIR /app
+
+ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
+
+# Créer un utilisateur non-root
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copier les fichiers nécessaires
+COPY --from=builder /app/apps/windsurf/public ./public
+COPY --from=builder /app/apps/windsurf/.next/standalone ./
+COPY --from=builder /app/apps/windsurf/.next/static ./.next/static
+
+# Changer les permissions
+USER nextjs
+
+EXPOSE 3000
+
+ENV PORT 3000
+ENV HOSTNAME "0.0.0.0"
+
+CMD ["node", "server.js"]

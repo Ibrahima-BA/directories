@@ -77,20 +77,84 @@ If you want to add new prompts to an existing rule, follow these steps:
 ### 5. Create a PR
 
 
-## Getting Started
+## 🚀 Getting Started
 
-First, run the development server:
+### Version 1.0 - État Actuel
+
+**⚠️ Statut :** En développement - Mode offline fonctionnel
+
+Cette version 1.0 est un **bon début** avec les fonctionnalités suivantes :
+
+#### ✅ Fonctionnalités Implémentées
+- **Mode offline complet** : L'application fonctionne sans base de données externe
+- **Données statiques** : Règles, emplois et MCPs de démonstration
+- **Interface utilisateur** : Toutes les pages sont accessibles
+- **Configuration Docker** : Prêt pour le déploiement
+- **Mocks complets** : Supabase, Redis, Luma, et autres services
+
+#### 🔧 Configuration Actuelle
+- **Mode développement** : Données statiques uniquement
+- **Services externes** : Désactivés (mocks)
+- **Base de données** : Non requise pour le développement
+
+#### 🐛 Problèmes Connus
+- **Erreurs de fetch** : `TypeError: fetch failed` vers `placeholder.upstash.io`
+- **Connexion base de données** : Non configurée (mode offline forcé)
+- **Services externes** : Tous mockés pour le développement
+
+### Installation et Démarrage
 
 ```bash
-npm install
+# 1. Installer les dépendances
+bun install
 
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 2. Démarrer le serveur de développement
+cd apps/cursor && bun run dev
+
+# 3. Accéder à l'application
+# http://localhost:3000 (ou port disponible)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🐳 Docker (Optionnel)
+
+```bash
+# Construire et démarrer avec Docker
+./docker-scripts.sh build
+./docker-scripts.sh up
+
+# Accéder à l'application
+# http://localhost:3000
+```
+
+### 📁 Structure du Projet
+
+```
+directories/
+├── apps/
+│   ├── cursor/          # Application Cursor
+│   └── windsurf/        # Application Windsurf
+├── packages/
+│   ├── data/            # Données partagées
+│   └── kv/              # Configuration Redis
+├── Dockerfile           # Configuration Docker
+├── docker-compose.yml   # Orchestration des services
+└── README-Docker.md     # Documentation Docker
+```
+
+### 🎯 Prochaines Étapes
+
+1. **Configuration base de données** : Connecter Supabase/PostgreSQL
+2. **Services externes** : Configurer Redis, Luma, etc.
+3. **Authentification** : Implémenter l'auth utilisateur
+4. **Tests** : Ajouter des tests unitaires et d'intégration
+5. **Production** : Déploiement et monitoring
+
+### 📚 Documentation
+
+- **Docker** : `README-Docker.md`
+- **Configuration** : `DOCKER-SETUP.md`
+- **Solution simple** : `SOLUTION-SIMPLE.md`
+
+### 🤝 Contribution
+
+Voir les sections ci-dessus pour contribuer aux règles et prompts.

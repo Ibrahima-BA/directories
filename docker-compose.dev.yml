@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  # Application Cursor en mode développement
+  cursor-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/apps/cursor/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_SUPABASE_URL=https://placeholder.supabase.co
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=demo-anon-key
+      - UPSTASH_REDIS_REST_URL=https://placeholder.upstash.io
+      - UPSTASH_REDIS_REST_TOKEN=demo-token
+      - RESEND_API_KEY=demo-resend-key
+      - LUMA_API_KEY=demo-luma-key
+    command: bun run dev
+    networks:
+      - directories-dev
+
+  # Redis pour le développement
+  redis-dev:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-dev-data:/data
+    networks:
+      - directories-dev
+    command: redis-server --appendonly yes
+
+volumes:
+  redis-dev-data:
+
+networks:
+  directories-dev:
+    driver: bridge

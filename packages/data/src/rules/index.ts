@@ -9,6 +9,7 @@ import { autohotkeyRules } from "./autohotkey";
 import { blazorRules } from "./blazor";
 import { bootstrapRules } from "./bootstrap";
 import { cRules } from "./c";
+import { cairoRules } from "./cairo";
 import { chromeExtensionRules } from "./chrome-extension";
 import { convexRules } from "./convex";
 import { cosmwasmRules } from "./cosmwasm";
@@ -78,6 +79,7 @@ import { webScrapingRules } from "./web-scraping";
 import { wordpressRules } from "./wordpress";
 import { wordpressWoocommerce } from "./wordpress-woocommerce";
 import { shopifyThemeRules } from "./shopify-theme-development";
+import { symfonyRules } from "./symfony";
 
 export const rules: Rule[] = [
   ...ALRules,
@@ -89,6 +91,7 @@ export const rules: Rule[] = [
   ...blazorRules,
   ...cosmwasmRules,
   ...bootstrapRules,
+  ...cairoRules,
   ...chromeExtensionRules,
   ...convexRules,
   ...cppRules,
@@ -159,6 +162,7 @@ export const rules: Rule[] = [
   ...typescriptRules,
   ...viewComfyRules,
   ...shopifyThemeRules,
+  ...symfonyRules,
 ].map(
   (rule): Rule => ({
     ...rule,

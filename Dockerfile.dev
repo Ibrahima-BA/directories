@@ -1,0 +1,33 @@
+# Dockerfile pour le développement
+FROM node:18-alpine
+
+# Installer bun
+RUN npm install -g bun
+
+# Installer les dépendances système
+RUN apk add --no-cache libc6-compat
+
+WORKDIR /app
+
+# Copier les fichiers de configuration
+COPY package.json bun.lockb ./
+COPY apps/cursor/package.json ./apps/cursor/
+COPY packages/data/package.json ./packages/data/
+COPY packages/kv/package.json ./packages/kv/
+
+# Installer les dépendances
+RUN bun install
+
+# Copier le code source
+COPY . .
+
+# Variables d'environnement pour le développement
+ENV NODE_ENV=development
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Exposer le port
+EXPOSE 3000
+
+# Commande par défaut
+WORKDIR /app/apps/cursor
+CMD ["bun", "run", "dev"]

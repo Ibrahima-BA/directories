@@ -1,4 +1,8 @@
 import { createClient } from "@/utils/supabase/admin-client";
+import { staticJobs, staticMcps } from "./static-data";
+
+// FORCER LE MODE OFFLINE - Toujours en mode offline
+const OFFLINE_MODE = true;
 
 export async function getUserProfile(slug: string, userId?: string) {
   const supabase = await createClient();
@@ -65,6 +69,12 @@ export async function getUserFollowing(id: string) {
 }
 
 export async function getPopularPosts() {
+  if (OFFLINE_MODE) {
+    return {
+      data: [],
+    };
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase.rpc("get_popular_posts");
 
@@ -118,6 +128,13 @@ export async function getFeaturedJobs({
 }: {
   onlyPremium?: boolean;
 } = {}) {
+  if (OFFLINE_MODE) {
+    return {
+      data: staticJobs.filter(job => job.featured),
+      error: null,
+    };
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("jobs")
@@ -136,6 +153,13 @@ export async function getFeaturedJobs({
 }
 
 export async function getJobs() {
+  if (OFFLINE_MODE) {
+    return {
+      data: staticJobs,
+      error: null,
+    };
+  }
+
   const supabase = await createClient();
 
   const { data, error } = await supabase
@@ -176,6 +200,13 @@ export async function getFeaturedMCPs({
 }: {
   onlyPremium?: boolean;
 } = {}) {
+  if (OFFLINE_MODE) {
+    return {
+      data: staticMcps.filter(mcp => mcp.featured),
+      error: null,
+    };
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("mcps")
@@ -195,6 +226,13 @@ export async function getFeaturedMCPs({
 }
 
 export async function getTotalUsers() {
+  if (OFFLINE_MODE) {
+    return {
+      data: { count: 1250 },
+      error: null,
+    };
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("users")
@@ -223,6 +261,13 @@ export async function getMCPs({
   page?: number;
   limit?: number;
 } = {}) {
+  if (OFFLINE_MODE) {
+    return {
+      data: staticMcps,
+      error: null,
+    };
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("mcps")
@@ -257,6 +302,13 @@ export async function getMembers({
   limit = 33,
   q,
 }: GetMembersParams = {}) {
+  if (OFFLINE_MODE) {
+    return {
+      data: [],
+      error: null,
+    };
+  }
+
   const supabase = await createClient();
   const query = supabase
     .from("users")
